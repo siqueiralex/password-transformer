@@ -44,19 +44,19 @@ button {
     line-height: 30px;
 }
 
-.generator form {
+.generator .form {
     display: flex;
     flex-direction: column;
 }
 
-.generator form label {
+.generator .form label {
     font-size: 16px;
     color: #444;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-.generator form input {
+.generator .form input {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 2px;
