@@ -20,13 +20,14 @@ body,
 input,
 button {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .container {
     margin: 80px auto 0;
     max-width: 450px;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,11 +38,7 @@ button {
     background: #cccc;
     border-radius: 4px;
     padding: 30px;
-}
-
-.generator>p {
-    font-size: 18px;
-    line-height: 30px;
+    margin-top: 100px;
 }
 
 .generator .form {
@@ -50,7 +47,7 @@ button {
 }
 
 .generator .form label {
-    font-size: 16px;
+    font-size: 14px;
     color: #444;
     font-weight: bold;
     margin-bottom: 8px;
@@ -62,9 +59,30 @@ button {
     border-radius: 2px;
     height: 45px;
     padding: 0 15px;
-    font-size: 16px;
+    font-size: 14px;
     min-width: 80%;
 }
+
+@media screen and (max-width: 450px) {
+    .form > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .generator i, span {
+        margin: 30px;
+    }
+
+    .svg-inline--fa {
+        width:50px;
+    }
+
+    .generator .form input {
+        margin: 0;
+    }
+
+
+  }
 
 .generator button.btn {
     border: 0;

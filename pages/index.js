@@ -61,8 +61,11 @@ export default function Home() {
                 value = {password}
                 disabled
                 />
+                <span>
                 <i onClick={togglePasswordVisiblity}>{eye}</i>
                 <i onClick={() => {navigator.clipboard.writeText(password)}} >{copyIcon}</i>
+
+                </span>
               </div>
             </div>             
         </div>
