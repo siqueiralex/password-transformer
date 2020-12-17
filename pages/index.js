@@ -1,7 +1,7 @@
 import { sha256 } from 'js-sha256';
 import React, {useState, useEffect} from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faCopy } from "@fortawesome/free-solid-svg-icons";
+import Head from 'next/head'
+import {Eye, Copy} from '../components/svgs.js'
 
 const minus = "abcdefghijklmnopwrstuvwxyz"
 const maius = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -10,63 +10,67 @@ const espec = "!@#$%^&*()"
 
 export default function Home() {
 
-  const eye = <FontAwesomeIcon icon={faEye} />;
-  const copyIcon = <FontAwesomeIcon icon={faCopy} />;
-
   const [phrase, setPhrase] = useState('');
   const [password, setPassword] = useState('');
-  const [passwordShown, setPasswordShown] = useState(false);
   const [phraseShown, setPhraseShown] = useState(false);
+  const [copiedShown, setCopiedShown] = useState(false);
 
-  const togglePasswordVisiblity = () => {
-    setPasswordShown(passwordShown ? false : true);
-  };
   const togglePhraseVisiblity = () => {
     setPhraseShown(phraseShown ? false : true);
   };
 
+  const clickedToCopy = () => {
+    setCopiedShown(true)
+    navigator.clipboard.writeText(password)
+  }
+
+  const userTyping = e => {
+    setPhrase(e.target.value)    
+    setCopiedShown(false)
+  }
+
   useEffect( () => {
 
     setPassword(transform(phrase)) 
-
+    // setCopiedShown(false)
   });  
 
 
   return (
     <div className="container">
-
+        <Head>
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <title>Password Transformer</title>
+          
+        </Head>
         <div className="generator">
             <div className="form">
 
-              <label htmlFor="phrase">Weak Password</label>
-              <div>
+              <div className="pass-wrapper">
 
-              <input 
-              type = {phraseShown ? "text" : "password"}
-              id="phrase" 
-              placeholder="Your easy-to-remember password" 
-              value = {phrase}
-              onChange={ e => setPhrase(e.target.value) }/>
-
-              <i onClick={togglePhraseVisiblity}>{eye}</i>
-              </div>
-              
-              
-                <label htmlFor="phrase">Strong Password</label>
-                <div className="pass-wrapper">
                 <input 
-                type={passwordShown ? "text" : "password"}
+                type = {phraseShown ? "text" : "password"}
+                id="phrase" 
+                placeholder="Enter your easy-to-remember password here" 
+                value = {phrase}
+                onChange={ e => userTyping(e) }/>
+                <Eye onClick={togglePhraseVisiblity} />
+                </div>
+              <div className="pass-wrapper">
+                <input 
+                type = {phraseShown ? "text" : "password"}
                 id="strongpassword" 
-                placeholder="Your strong password will appear here" 
+                placeholder="a stronger password will appear here" 
                 value = {password}
                 disabled
                 />
-                <span>
-                <i onClick={togglePasswordVisiblity}>{eye}</i>
-                <i onClick={() => {navigator.clipboard.writeText(password)}} >{copyIcon}</i>
+                  <Copy onClick={clickedToCopy}/>
 
-                </span>
+                
               </div>
+              <div className={copiedShown? 'copied' : 'hide'} >copied to clipboard!</div>
             </div>             
         </div>
  
