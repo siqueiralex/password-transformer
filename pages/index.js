@@ -54,7 +54,7 @@ export default function Home() {
                 autoComplete="off"
                 type = {phraseShown ? "text" : "password"}
                 id="phrase" 
-                placeholder="Enter your easy-to-remember password here" 
+                placeholder="Enter your easy-to-remember password" 
                 value = {phrase}
                 onChange={ e => userTyping(e) }/>
                 <Eye onClick={togglePhraseVisiblity} />
@@ -68,11 +68,13 @@ export default function Home() {
                 value = {password}
                 disabled
                 />
+
                   <Copy onClick={clickedToCopy}/>
 
                 
               </div>
-              <div className={copiedShown? 'copied' : 'hide'} >copied to clipboard!</div>
+            
+              <div className={copiedShown? 'copied' : 'hide'}>copied to clipboard!</div>
             </div>             
         </div>
  
