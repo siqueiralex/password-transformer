@@ -122,8 +122,7 @@ body {
 
     .generator {
         width: 100%;
-        padding-top: 60px;
-        padding-bottom: 0px;
+        padding: 0;
         height: 100vh;
 
     }
@@ -134,10 +133,11 @@ body {
 
     .form input{
         font-size: 17px !important;
-        width: 85% !important;
+        width: 90% !important;
         font-weight: bold;
         font-size: 22px !important;
         height: 60px !important;
+        margin: 0;
     }
 
     svg {
