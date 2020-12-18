@@ -60,7 +60,7 @@ export default function Home() {
                 placeholder="Enter your easy-to-remember password" 
                 value = {phrase}
                 onChange={ e => userTyping(e) }/>
-                <div className={copiedShown? 'copied-top' : 'hide'}>copied to clipboard!</div>
+                <div className={copiedShown? 'copied-top' : 'copied-top hide'}>copied to clipboard!</div>
                 <Eye onClick={togglePhraseVisiblity} />
                 </div>
               <div className="pass-wrapper">
@@ -78,7 +78,7 @@ export default function Home() {
                 
               </div>
               
-              <div className={copiedShown? 'copied-bottom' : 'hide'}>copied to clipboard!</div>
+              <div className={copiedShown? 'copied-bottom' : 'copied-bottom hide'}>copied to clipboard!</div>
             </form>             
         </div>
  
