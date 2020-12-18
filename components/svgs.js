@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Eye = (props) => {
     return (
-    <div  className= "svg">
-    <svg onClick={props.onClick} width="40px" height="35px" x="35px" y="0px" viewBox="0 0 511.626 511.626">
+    <div onClick={props.onClick} className= "svg">
+    <svg  width="40px" height="35px" x="35px" y="0px" viewBox="0 0 511.626 511.626">
     <g>
     <path d="M505.918,236.117c-26.651-43.587-62.485-78.609-107.497-105.065c-45.015-26.457-92.549-39.687-142.608-39.687
         c-50.059,0-97.595,13.225-142.61,39.687C68.187,157.508,32.355,192.53,5.708,236.117C1.903,242.778,0,249.345,0,255.818
