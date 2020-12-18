@@ -168,10 +168,24 @@ body {
         margin-bottom: 40px;
         font-size: 16px!important;
     }
+    .copied-bottom {
+        display: none!important;
+    }
+    .copied-top {
+        display: flex!important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        transition: 1s all ease;
+        font-family: 'Noto Sans JP', sans-serif;
+        transition: display 0.3s, height 0.3s, margin 0.3s,visibility 1s, opacity 0.5s ease-in-out;
+    }
 
     .hide{
-        /* margin-bottom: 40px; */
-        font-size: 16px!important;
+        font-size: 12px!important;
+        height: 0px!important;
     }
     /* .generator .form input {
         margin: 0;
@@ -198,8 +212,10 @@ body {
     background-color:#2a2a31!important;
     cursor: pointer;
 }
-
-.copied {
+.copied-top {
+    display: none;
+}
+.copied-bottom {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -214,6 +230,7 @@ body {
 .hide {
     visibility: hidden;
     opacity: 0;
+    height: 0px!important;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -222,5 +239,5 @@ body {
     font-weight: bold;
     transition: 1s all ease;
     font-family: 'Noto Sans JP', sans-serif;
-    transition: margin 0.3s, visibility 0.3s, opacity 0.3s ease-in-out;
+    transition: display 0.3s, height 0.3s, margin 0.3s,visibility 1s, opacity 0.5s ease-in-out;
 }
