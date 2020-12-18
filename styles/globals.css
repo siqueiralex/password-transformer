@@ -157,15 +157,14 @@ body {
 
 
     .copied-bottom {
-        display: none;
+        display: none!important;
     }
     .copied-top {
-        margin-bottom: 40px;
-        font-size: 16px!important;
-        display: flex;
-        flex-direction: row;
+        margin-bottom: 0px;
+        display: flex!important;
+        /*flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
         font-size: 12px;
         font-weight: bold;
         transition: 1s all ease;
