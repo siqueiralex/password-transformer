@@ -45,6 +45,7 @@ export default function Home() {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <title>PassTry.me</title>
+          <script data-ad-client="ca-pub-7167340653114236" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           
         </Head>
       <div className="container">
