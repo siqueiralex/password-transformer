@@ -28,6 +28,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+button {
+    border-width: 0px;
+}
+
 
 
 html,
@@ -142,19 +146,24 @@ body {
         margin: 0;
     }
 
-    svg {
-        width: 80px;
+    .svg {
+        width: 90% !important;
         height: 80px;
         padding: 20px 20px 10px 20px;
         /* background-color: rgb(230, 231, 231); */
         
     }
 
-    svg:hover {
+    .svg:active {
         fill: #F4EEF4!important;
         background-color:#2a2a31!important;
         cursor: pointer;
     }
+    /* .svg:hover, .svg:focus  {
+        fill: #2a2a31!important;
+        background-color:#F4EEF4!important;
+        cursor: pointer;
+    } */
 
     .copied{
         margin-bottom: 40px;
@@ -172,13 +181,22 @@ body {
 
   }
 
-svg {
-    margin: 5px 15px;
-    padding-top: 10px;
+.svg {
+    width: 100%;
+    margin: 5px 5px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.svg > svg {
+    height: 100%;
+    padding: 5px 0;
 }
 
-svg:hover {
-    fill: #93A7BA;
+.svg:focus, .svg:hover  {
+    fill: #F4EEF4!important;
+    background-color:#2a2a31!important;
     cursor: pointer;
 }
 

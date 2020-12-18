@@ -70,12 +70,12 @@ export default function Home() {
                 value = {password}
                 disabled
                 />
-
+                
                   <Copy onClick={clickedToCopy}/>
 
                 
               </div>
-            
+              
               <div className={copiedShown? 'copied' : 'hide'}>copied to clipboard!</div>
             </div>             
         </div>
