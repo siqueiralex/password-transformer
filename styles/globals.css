@@ -128,8 +128,7 @@ body {
 
     .generator {
         width: 100%;
-        padding-top: 60px;
-        /* height: 100vh; */
+        padding: 60px 4px 4px 0px !important;
 
     }
 
@@ -141,7 +140,7 @@ body {
         font-size: 17px !important;
         width: 90% !important;
         font-weight: bold;
-        font-size: 20px !important;
+        font-size: 18px !important;
         height: 60px !important;
         margin: 0;
     }
