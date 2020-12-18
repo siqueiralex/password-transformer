@@ -19,7 +19,8 @@ export default function Home() {
     setPhraseShown(phraseShown ? false : true);
   };
 
-  const clickedToCopy = () => {
+  const clickedToCopy = e => {
+    e.preventDefault()
     setCopiedShown(true)
     navigator.clipboard.writeText(password)
   }
@@ -48,12 +49,12 @@ export default function Home() {
         </Head>
       <div className="container">
         <div className="generator">
-            <div className="form">
+            <form className="form" autoComplete="off" action="">
 
               <div className="pass-wrapper">
-
+            
                 <input 
-                autoComplete="nope"
+                autoComplete="off"
                 type = {phraseShown ? "text" : "password"}
                 id="phrase" 
                 placeholder="Enter your easy-to-remember password" 
@@ -63,7 +64,7 @@ export default function Home() {
                 </div>
               <div className="pass-wrapper">
                 <input 
-                autoComplete="nope"
+                autoComplete="off"
                 type = {phraseShown ? "text" : "password"}
                 id="strongpassword" 
                 placeholder="a stronger password will appear here" 
@@ -71,13 +72,13 @@ export default function Home() {
                 disabled
                 />
                 
-                  <Copy onClick={clickedToCopy}/>
+                  <Copy onClick={event => {clickedToCopy(event)}}/>
 
                 
               </div>
               
               <div className={copiedShown? 'copied' : 'hide'}>copied to clipboard!</div>
-            </div>             
+            </form>             
         </div>
  
       </div>
