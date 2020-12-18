@@ -53,7 +53,7 @@ export default function Home() {
               <div className="pass-wrapper">
 
                 <input 
-                autoComplete="off"
+                autoComplete="nope"
                 type = {phraseShown ? "text" : "password"}
                 id="phrase" 
                 placeholder="Enter your easy-to-remember password" 
@@ -63,7 +63,7 @@ export default function Home() {
                 </div>
               <div className="pass-wrapper">
                 <input 
-                autoComplete="off"
+                autoComplete="nope"
                 type = {phraseShown ? "text" : "password"}
                 id="strongpassword" 
                 placeholder="a stronger password will appear here" 
